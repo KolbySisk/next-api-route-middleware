@@ -5,6 +5,13 @@
   "description": "Middleware for nextjs api routes",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KolbySisk/next-api-route-middleware"
+  },
+  "files": [
+    "dist"
+  ],
   "exports": {
     "require": "./dist/index.cjs",
     "import": "./dist/index.js"
