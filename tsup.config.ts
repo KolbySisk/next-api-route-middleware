@@ -1,9 +1,20 @@
-import { defineConfig } from 'tsup';
+import { defineConfig, Options } from 'tsup';
 
-export default defineConfig({
+const shared: Options = {
+  entry: ['src/index.ts'],
   clean: true,
-  format: ['cjs', 'esm'],
-  outExtension(ctx) {
-    return { js: `.${ctx.format}.js` };
+};
+
+export default defineConfig([
+  {
+    ...shared,
+    format: 'esm',
+    target: 'node16',
+    dts: true,
   },
-});
+  {
+    ...shared,
+    format: 'cjs',
+    target: 'node14',
+  },
+]);
