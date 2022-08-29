@@ -81,7 +81,7 @@ export const addUser: Middleware<NextApiRequestWithUser> = async (req, res, next
 
 #### allowMethods
 
-You may find that you need to add args to a middleware. To achieve this we make use of a factory pattern. The `allowMethods` function bellow accepts an array of allowed methods, and returns a middleware. We can make use of this factor by calling the function: `allowMethods(['GET', 'POST'])`
+You may find that you need to add args to a middleware. To achieve this we make use of a factory pattern. The `allowMethods` function bellow accepts an array of allowed methods, and returns a middleware. We can make use of this factory by calling the function: `allowMethods(['GET', 'POST'])`
 
 ```ts
 import { Middleware } from 'next-api-route-middleware';
