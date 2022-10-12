@@ -1,7 +1,7 @@
 {
   "name": "next-api-route-middleware",
   "author": "kolbysisk",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Middleware for nextjs api routes",
   "license": "MIT",
   "type": "module",
