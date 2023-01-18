@@ -41,7 +41,7 @@ export const withUser: Middleware<NextApiRequestWithUser> = async (req, res, nex
 
   if (authCookie) {
     req.userId = authCookie.userId;
-    next();
+    await next();
   } else {
     res.status(401).send({ message: 'Invalid auth cookie.' });
   }
@@ -72,7 +72,7 @@ export const addUser: Middleware<NextApiRequestWithUser> = async (req, res, next
 
   if (authCookie) {
     req.userId = authCookie.userId;
-    next();
+    await next();
   } else {
     res.status(401).send({ message: 'Invalid auth cookie.' });
   }
@@ -89,7 +89,7 @@ import { Middleware } from 'next-api-route-middleware';
 export const allowMethods = (allowedMethods: string[]): Middleware => {
   return async function (req, res, next) {
     if (allowedMethods.includes(req.method!) || req.method == 'OPTIONS') {
-      next();
+      await next();
     } else {
       res.status(405).send({ message: 'Method not allowed.' });
     }
