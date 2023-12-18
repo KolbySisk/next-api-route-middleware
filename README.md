@@ -9,9 +9,8 @@
 <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-api-route-middleware" alt="License"></a>
 </p>
 
-<br/>
-<br/>
-
+> ⚠️ This package is for projects using Next.js Pages Router. For projects using App Router see [next-route-handler-pipe](https://github.com/KolbySisk/next-route-handler-pipe).
+> 
 ## Introduction
 
 Middleware functions allows us to abstract reusable code that runs before the api handler is invoked. They have access to the `req`, `res`, and the `next` middleware function.
